@@ -1,0 +1,16 @@
+version: '2'
+services:
+  builder:
+    build: builder
+    image: nginx:latest
+    volumes:
+      - ./webapps:/tmp/webapps
+  prod:
+    image: tomcat:jre8-openjdk-slim
+#    environment:
+#      - CATALINA_BASE=/var/lib/tomcat9/
+#      - CATALINA_HOME=/usr/share/tomcat9
+    ports:
+      - "8080:80"
+    volumes:
+      - ./webapps:/usr/local/tomcat/webapps

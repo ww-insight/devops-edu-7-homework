@@ -3,7 +3,7 @@ services:
   builder:
     build: builder
     volumes:
-      - ./webapps/:/webapps/
+      - ./webapps/:/lswebapps/
   prod:
     image: tomcat:jre8-openjdk-slim
 #    environment:

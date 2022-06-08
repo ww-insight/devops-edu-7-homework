@@ -2,7 +2,6 @@ version: '2'
 services:
   builder:
     build: builder
-    image: nginx:latest
     volumes:
       - ./webapps:/tmp/webapps
   prod:

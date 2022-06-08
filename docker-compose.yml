@@ -11,6 +11,6 @@ services:
 #      - CATALINA_BASE=/var/lib/tomcat9/
 #      - CATALINA_HOME=/usr/share/tomcat9
     ports:
-      - "8080:80"
+      - "8081:8080"
     volumes:
       - ./webapps:/usr/local/tomcat/webapps

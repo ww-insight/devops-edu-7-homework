@@ -2,17 +2,10 @@ version: '2'
 services:
   builder:
     build: builder
-#    entrypoint:
-#      - cp
-#      - boxfuse-sample-java-war-hello/target/hello-1.0.war
-#      - /webapps
     volumes:
       - webapps:/webapps
   prod:
     image: tomcat:jre8-openjdk-slim
-#    environment:
-#      - CATALINA_BASE=/var/lib/tomcat9/
-#      - CATALINA_HOME=/usr/share/tomcat9
     ports:
       - "8081:8080"
     volumes:

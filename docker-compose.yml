@@ -2,8 +2,8 @@ version: '2'
 services:
   builder:
     build: builder
-    volumes:
-      - ./webapps:/webapps
+    volumes_from:
+      - prod
   prod:
     image: tomcat:jre8-openjdk-slim
 #    environment:

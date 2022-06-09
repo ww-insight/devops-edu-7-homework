@@ -5,9 +5,9 @@ services:
     entrypoint:
       - cp
       - boxfuse-sample-java-war-hello/target/hello-1.0.war
-      - /usr/local/tomcat/webapps
-    volumes_from:
-      - prod
+      - /webapps
+    volumes:
+      - webapps:/webapps
   prod:
     image: tomcat:jre8-openjdk-slim
 #    environment:
@@ -16,4 +16,6 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ./webapps:/usr/local/tomcat/webapps
+      - webapps:/usr/local/tomcat/webapps
+volumes:
+  webapps:

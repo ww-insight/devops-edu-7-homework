@@ -2,10 +2,10 @@ version: '2'
 services:
   builder:
     build: builder
-    entrypoint:
-      - cp
-      - boxfuse-sample-java-war-hello/target/hello-1.0.war
-      - /webapps
+#    entrypoint:
+#      - cp
+#      - boxfuse-sample-java-war-hello/target/hello-1.0.war
+#      - /webapps
     volumes:
       - webapps:/webapps
   prod:

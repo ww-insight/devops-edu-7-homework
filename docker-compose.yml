@@ -2,6 +2,10 @@ version: '2'
 services:
   builder:
     build: builder
+    entrypoint:
+      - cp
+      - boxfuse-sample-java-war-hello/target/hello-1.0.war
+      - /usr/local/tomcat/webapps
     volumes_from:
       - prod
   prod:
